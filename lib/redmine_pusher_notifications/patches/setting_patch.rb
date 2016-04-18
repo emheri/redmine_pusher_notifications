@@ -45,6 +45,7 @@ module RedminePusherNotifications
               app_id    valuehash[:pusher_app_id]
               key       valuehash[:pusher_key]
               secret    valuehash[:pusher_secret]
+              cluster   valuehash[:pusher_cluster]
               encrypted valuehash[:pusher_encrypted]
             end
 

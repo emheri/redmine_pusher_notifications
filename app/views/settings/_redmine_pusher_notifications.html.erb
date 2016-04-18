@@ -17,6 +17,7 @@
   pusher_app_id       = (!Setting.plugin_redmine_pusher_notifications[:pusher_app_id].nil?)       ? Setting.plugin_redmine_pusher_notifications[:pusher_app_id] : ''
   pusher_key          = (!Setting.plugin_redmine_pusher_notifications[:pusher_key].nil?)          ? Setting.plugin_redmine_pusher_notifications[:pusher_key] : ''
   pusher_secret       = (!Setting.plugin_redmine_pusher_notifications[:pusher_secret].nil?)       ? Setting.plugin_redmine_pusher_notifications[:pusher_secret] : ''
+  pusher_cluster       = (!Setting.plugin_redmine_pusher_notifications[:pusher_cluster].nil?)     ? Setting.plugin_redmine_pusher_notifications[:pusher_cluster] : ''
   pusher_encrypted    = (!Setting.plugin_redmine_pusher_notifications[:pusher_encrypted].nil?)    ? Setting.plugin_redmine_pusher_notifications[:pusher_encrypted] : true
   popup_default_delay = (!Setting.plugin_redmine_pusher_notifications[:popup_default_delay].nil?) ? Setting.plugin_redmine_pusher_notifications[:popup_default_delay] : 6000
 
@@ -39,6 +40,11 @@
 <p>
   <%= content_tag(:label, l(:field_pusher_secret)) %>
   <%= text_field_tag("settings[pusher_secret]", pusher_secret, :size => '30') %>
+</p>
+
+<p>
+  <%= content_tag(:label, l(:field_pusher_cluster)) %>
+  <%= text_field_tag("settings[pusher_cluster]", pusher_cluster, :size => '30') %>
 </p>
 
 <p>

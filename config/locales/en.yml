@@ -4,6 +4,7 @@ en:
   field_pusher_app_id: Pusher App ID
   field_pusher_key: Pusher Key
   field_pusher_secret: Pusher Secret
+  field_pusher_cluster: Pusher cluster
   field_pusher_encrypted: Enable SSL?
   field_popup_default_delay: Popup default delay
 

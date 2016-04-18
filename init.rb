@@ -19,6 +19,7 @@ Redmine::Plugin.register :redmine_pusher_notifications do
       :pusher_app_id       => '',
       :pusher_key          => '',
       :pusher_secret       => '',
+      :pusher_cluster      => '',
       :pusher_encrypted    => true,
       :popup_default_delay => 6000,
     }
@@ -45,6 +46,7 @@ Rails.configuration.after_initialize do
     app_id    Setting.plugin_redmine_pusher_notifications[:pusher_app_id]
     key       Setting.plugin_redmine_pusher_notifications[:pusher_key]
     secret    Setting.plugin_redmine_pusher_notifications[:pusher_secret]
+    cluster   Setting.plugin_redmine_pusher_notifications[:pusher_cluster]
     encrypted Setting.plugin_redmine_pusher_notifications[:pusher_encrypted]
   end
 end
