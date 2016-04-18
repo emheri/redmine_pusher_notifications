@@ -7,7 +7,10 @@
       <%= extend_gritter :fade_out_speed => 'fast' %>
 
       $(function() {
-        var pusher = new Pusher('<%= ActsAsNotifiableRedmine::Notifications.courier.key %>');
+        var pusher = new Pusher('<%= ActsAsNotifiableRedmine::Notifications.courier.key %>', {
+                      cluster: '<%= ActsAsNotifiableRedmine::Notifications.courier.cluster %>',
+                      encrypted: <%= ActsAsNotifiableRedmine::Notifications.courier.encrypted %>
+                    });
 
         <% ActsAsNotifiableRedmine::Notifications.channels.each do |name, channel| %>
           var <%= j channel.identifier %> = pusher.subscribe('<%= channel.token %>');
